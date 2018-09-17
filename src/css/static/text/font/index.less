@@ -1,0 +1,42 @@
+/**
+  * 以后版本中，字体最大值与最小值与UI确认
+  * 字体最大最小基数
+ */
+
+@import (reference) "../../global/index";
+
+@counts: (@end-size - @base-size)/2;
+
+.font-size-h1 {
+  font-size: @font-size-h1;
+}
+.generate-columns(@counts);
+.generate-columns(@counts, @i:0) when (@i <= @counts) {
+  .font-size-@{i} {
+    font-size: @end-size - @i * 2;
+  }
+  .generate-columns(@counts, (@i+1));
+};
+
+.font-size-p {
+  .font-size-5
+}
+
+.font-color-theme {
+  color: @theme-color;
+}
+.font-color-normal {
+  color: @font-color-p
+}
+.font-color-sub {
+  color: @font-color-sub
+}
+.font-color-white {
+  color: @normal-color-white
+}
+.font-color-blue {
+  color: @color-text-blue
+}
+.font-color-yellow {
+  color: @color-text-yellow
+}

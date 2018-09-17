@@ -12,8 +12,7 @@ export default {
 </script>
 
 <style lang="less">
-  @import "css/ui-frame/index";
-
+  @import "../src/css/static/index";
 .container {
   height: 100%;
   display: flex;

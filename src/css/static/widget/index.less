@@ -1,0 +1,206 @@
+
+@import (reference) "../global/index";
+@import (reference) "../text/index";
+@import (reference)  "../layout/index";
+
+@width-cart-item-delete: 160rpx; //删除购物车 item
+
+/* 业务相关 start */
+// 价格
+.price {
+  font-family: Verdana-Bold;
+}
+.price-origin {
+  font-family: Verdana;
+}
+.price-lev-0 { //for 主页 特殊，字体大小 50rpx;
+  color: @theme-color-price;
+  .font-size-h1;
+  .price;
+}
+.price-lev-1 { //for 列表
+  color: @theme-color-price;
+  .font-size-4;
+  .price;
+}
+.price-lev-2 { //for 列表
+  color: @theme-color-price;
+  .font-size-5;
+  .price;
+}
+.price-lev-3 { //for 列表
+  color: @theme-color-price;
+  .font-size-3;
+  .price;
+}
+// 复用，覆盖基础样式
+.price-sale-out {
+  color: @font-color-sub;
+}
+.origin-price {
+  .price-origin;
+  color: @font-color-sub;
+  text-decoration: line-through;
+}
+.origin-price-1 {
+  .origin-price;
+  .font-size-2;
+}
+
+.origin-price-2 {
+  .origin-price;
+  .font-size-5;
+}
+
+.origin-price-3 {
+  .origin-price;
+  .font-size-7;
+}
+
+.separator-line {
+  border-top: solid @base-px @vertical-separate-line-color;
+}
+
+.separator-line-bold {
+  border-top: solid @base-px*10 @vertical-separate-line-color;
+}
+
+/* label start */
+.label-theme {
+  .font-size-7;
+  .pr2;
+  .pl2;
+  .pt2;
+  .pb2;
+  border-radius: @border-radius;
+}
+.label-theme-fill {
+  .label-theme;
+  color: @normal-color-white;
+  background-color: @theme-color;
+}
+
+.label-theme-empty {
+  .label-theme;
+  color: @font-color-sub;
+  border: solid 1rpx @theme-color
+}
+/* label end*/
+
+/* 通屏提示 start */
+.line-full {
+  .font-size-5;
+  width: 100%;
+  height: @height-notice;
+  line-height: @height-notice;
+  text-align: center;
+  overflow: hidden;
+}
+
+.line-full-notice { //适合单元素提醒
+  .line-full;
+  .font-color-theme;
+  .bg-color-theme-light;
+}
+
+.line-full-notice-blue { //适合单元素提醒
+  .line-full;
+  .font-color-blue;
+  .bg-color-blue-light;
+}
+
+.line-full-notice-yellow { //适合单元素提醒
+  .line-full;
+  .font-color-yellow;
+  .bg-color-yellow-light;
+}
+
+.line-full-notice-more { //适合多元素提醒
+  width: 100%;
+  color: @theme-color;
+  background-color: @bg-notice-color;
+  .font-size-5;
+}
+/* 通屏提示 end */
+
+/* 横向通屏标题 start */
+.full
+/* 横向通屏标题 end */
+
+/* delete for cart item start */
+.item-cell-delete {
+  position:absolute;
+  top:0;
+  right: -@width-cart-item-delete;
+  width: @width-cart-item-delete;
+  height: @height-cart-item;
+  line-height: @height-cart-item;
+  text-align:center;
+  .font-color-white;
+  .bg-color-red-light;
+  .font-size-4;
+}
+/* delete for cart item end */
+
+/* saleout start */
+.wrap-sale-out {
+  z-index: 9999;
+  display: flex;
+  position: absolute; // 跟着你爹定位
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wrap-sale-out .cotent-label {
+  margin: auto; // 水平垂直居中
+    text-align: center;
+    color: @color-text-white;
+    font-size: @base-font-size;
+    background-color: @color-filter-bg;
+    border-radius: 50%;
+  }
+.wrap-sale-out .cotent-label-@{small} {
+  .wrap-sale-out .cotent-label;
+  width: @saleout-label-width-lev2;
+  height: @saleout-label-height-lev2;
+  line-height: @saleout-label-height-lev2;
+}
+.wrap-sale-out .cotent-label-@{middle} {
+  .wrap-sale-out .cotent-label;
+  width: @saleout-label-width-lev1;
+  height: @saleout-label-height-lev1;
+  line-height: @saleout-label-height-lev1;
+}
+/* saleout end */
+
+.module-bottom-pop {
+  .content-vertical-horizontal-center;
+  .is-wrap-true;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: @base*70;
+  color: @normal-color-white;
+  background-color: @pop-bg-color;
+}
+
+.list-national-flag {
+  width: 12px;
+  height: 12px;
+}
+
+.fl-btn {
+  position: fixed;
+  right: 10rpx;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: solid 1rpx #f5f5f5;
+}
+
+/* 业务相关 end */

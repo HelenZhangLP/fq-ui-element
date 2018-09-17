@@ -1,0 +1,3 @@
+
+#### 说明：
+> static/global/index.less 配置整站的能用样式，如 background-color,font,color...

@@ -1,15 +1,21 @@
 <template>
-  <div class="container">
-    <div class="layout-block-wrap">
-      <img src="../../images/app.png" alt="" class="son-element circle-90rpx">
+  <div class="">
+    <div class="">
+      <img src="../../images/app.png" alt="" class="">
       <div class="text text-align">fangqu ui frame</div>
     </div>
-    <div class="wrap-block pt10">
-      <div class="wrap-flex height-90rpx">
-        <span class="iconfont icon-home"></span>
-        <span class="text f-1">布局</span>
-      </div>
-    </div>
+    <!--<div class="wrap-block pt10">-->
+      <!--<a href="/pages/layout/main"-->
+         <!--class="wrap-flex height-90rpx">-->
+        <!--<span class="iconfont icon-home"></span>-->
+        <!--<span class="text f-1">布局</span>-->
+      <!--</a>-->
+      <!--<a href="/pages/bg/main"-->
+        <!--class="wrap-flex height-90rpx">-->
+        <!--<span class="iconfont icon-home"></span>-->
+        <!--<span class="text f-1">背景颜色</span>-->
+      <!--</a>-->
+    <!--</div>-->
   </div>
 
   <!--<div class="container" @click="clickHandle('test click', $event)">-->

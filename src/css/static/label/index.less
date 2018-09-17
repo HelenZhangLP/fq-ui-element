@@ -1,0 +1,36 @@
+@import (reference) "../text/index";
+@import (reference) "../global/base/index";
+
+/* label start */
+.label {
+  .font-size-7;
+  .pr1;
+  .pl1;
+  .pt1;
+  .pb1;
+  border-radius: @border-radius;
+}
+.label-theme-fill {
+  .label;
+  color: @normal-color-white;
+  background-color: @theme-color;
+}
+
+.label-theme-empty {
+  .label;
+  color: @theme-color;
+  border: solid @base @theme-color
+}
+
+.label-sub-empty {
+  .label;
+  color: @font-color-sub;
+  border: solid @base @bg-sub-color
+}
+
+.label-sub-fill {
+  .label;
+  color: @normal-color-white;
+  bacground-color: @bg-sub-color
+}
+/* label end */

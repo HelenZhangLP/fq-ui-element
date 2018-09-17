@@ -1,0 +1,98 @@
+@import (reference) "../base/index";
+
+/**
+  * reset padding
+ */
+.pn {
+  padding: 0!important;
+}
+
+.mn {
+  margin: 0!important;
+}
+
+
+.generate-columns(10);
+.generate-columns(@n, @i: 1) when (@i <= @n) {
+  .mt@{i} {
+    margin-top: ceil(@i * @base-px * 2.5);
+  }
+  .mb@{i} {
+    margin-bottom: ceil(@i * @base-px * 2.5);
+  }
+  .mr@{i} {
+    margin-right: @i * @base * 5;
+  }
+  .ml@{i} {
+    margin-left: @i * @base * 5;
+  }
+  .pt@{i} {
+    padding-top: ceil(@i * @base-px * 2.5);
+  }
+  .pb@{i} {
+    padding-bottom: ceil(@i * @base-px * 2.5);
+  }
+  .pr@{i} {
+    padding-right: @i * @base * 5;
+  }
+  .pl@{i} {
+    padding-left: @i * @base * 5;
+  }
+  .generate-columns(@n, (@i + 1));
+}
+
+/**
+  * 能用上下 10px 左右 15rpx
+ */
+
+.mb {
+  .mb4
+}
+
+.mt {
+  .mt4
+}
+
+.ml {
+  .ml6
+}
+
+.mr {
+  .mr6
+}
+
+.mlr {
+  .ml;
+  .mr;
+}
+
+
+/**
+  * 能用上下 10px 左右 15rpx
+ */
+
+.pb {
+  .pb4
+}
+
+.pt {
+  .pt4
+}
+
+.pl {
+  .pl6
+}
+
+.pr {
+  .pr6
+}
+
+.plr {
+  .pl;
+  .pr;
+}
+
+.ptb {
+  .pt;
+  .pb;
+}
